@@ -1,6 +1,7 @@
 # vbnet-updater-checker
 Simple Application Updater - check for update and download
 
+## what it does 
 * check for new version form a text file form a URL
 * compare with Appliation version form file named fileversion.ini in the app directory 
 * if it's good says - you have the final version 
