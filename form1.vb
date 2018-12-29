@@ -5,7 +5,7 @@ Imports System.Threading.Tasks
 Public Class Form1
     Dim WithEvents WC As New WebClient
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        Dim address As String = "http://www.sobhansoft.com/products/atafs/latestVersion.txt"
+        Dim address As String = "http://www.domain.com/product/latestVersion.txt"
         Label1.Text = "Checking for Update..."
         Try
             Using client = New WebClient()
@@ -25,7 +25,7 @@ Public Class Form1
                             Label1.Text = "removeing old version..."
                             IO.File.Delete(Application.StartupPath & "\app.exe")
                             Label1.Text = "Downloading update version..."
-                            WC.DownloadFileAsync(New Uri("http://www.sobhansoft.com/products/atafs/atafs-lastest.exe"), "atafs.exe")
+                WC.DownloadFileAsync(New Uri("http://www.domain.com/product/lastest.exe"), "app.exe")
                             Label1.Text = "App Updated Successfuly."
                         Else
                             Label2.Text = ("You have the latest version of app.")
